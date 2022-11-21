@@ -1,4 +1,4 @@
-<script setup>
+<script lang="ts">
 import { RouterLink, RouterView } from 'vue-router'
 import IconHeader from "./components/icons/IconHeader.vue"
 import IconFooter from "./components/icons/IconFooter.vue"
@@ -10,10 +10,10 @@ import IconFooter from "./components/icons/IconFooter.vue"
   <header class="header">
     <div>
       <RouterLink to="/" class="header-title">
-        <h1 class="header-pageName">PokeAdoptions</h1>
         <span class="header-logo">
           <IconHeader></IconHeader>
         </span>
+        <h1 class="header-pageName">PokeAdoptions</h1>
       </RouterLink>
     </div>
     <nav class="header-nav">
@@ -29,11 +29,13 @@ import IconFooter from "./components/icons/IconFooter.vue"
     </nav>
   </header>
 
+  <RouterView />
+
   <footer class="footer">
     <div class="footer-brand">
       <h2>PokeAdoptions</h2>
       <span class="footer-logo">
-        <IconHeader></IconHeader>
+        <IconFooter></IconFooter>
       </span>
     </div>
     <div class="footer-sections">
